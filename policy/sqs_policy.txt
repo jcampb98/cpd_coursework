@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Id": "arn:aws:sqs:us-east-1:758762124996:MyQueue2024472-MyQueue-T2ChbmqCRPs1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "SQS:SendMessage",
+      "Resource": "arn:aws:sqs:us-east-1:758762124996:sqs-2024472",
+      "Condition": {
+        "Bool": {
+          "aws:SecureTransport": "true"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:sns:us-east-1:758762124996:sns-topic2024472-1649755545559800314"
+        }
+      }
+    }
+  ]
+}
