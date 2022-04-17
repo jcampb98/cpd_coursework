@@ -9,7 +9,7 @@ sns = boto3.client('sns')
 
 def send_message(object_key):
     
-    number = '+447864259150'
+    number = 'ZZ-ZZZZZZZ'
 
     message = " is not wearing correct PPE"
     
